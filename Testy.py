@@ -1,5 +1,5 @@
 import unittest
-from test import from_roman
+from app import from_roman
 
 
 
@@ -17,6 +17,10 @@ class MyTestCase(unittest.TestCase):
     def test03(self):
         self.assertIsNone(from_roman('X'))
 
+    def test04(self):
+        self.assertRaises(TypeError, from_roman(1))
+    def test05(self):
+        self.assertRaises(Exception, from_roman('a'))
 if __name__ == '__main__':
     if __name__ == '__main__':
         unittest.main()
